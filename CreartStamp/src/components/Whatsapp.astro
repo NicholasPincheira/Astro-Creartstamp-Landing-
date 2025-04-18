@@ -1,0 +1,33 @@
+---
+import whatsappIcon from "../assets/img/social/whatsapp.png";
+import "../styles/components/Whatsapp.css"
+// Define tus variables (número de teléfono y mensaje)
+const whatsappNumber = "56979567422"; // Reemplaza con tu número sin ceros o símbolos adicionales.
+const whatsappMessage = "Hola, estoy interesado en sus productos.";
+const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+---
+
+<a
+    href={whatsappLink}
+    target="_blank"
+    rel="noopener noreferrer"
+    class="fixed bottom-20 left-4 z-50"
+>
+    <!-- Puedes usar un SVG inline o un icono que tengas en assets -->
+    <img
+        src={whatsappIcon.src}
+        alt="WhatsApp"
+        class="WhatsApp w-12 h-12 hover:opacity-80 transition-opacity"
+    />
+</a>
+
+<style>
+    .WhatsApp {
+        transition: 0.5s;
+    }
+    .WhatsApp:hover {
+        transform: scale(1.2);
+        filter: brightness(1.5);
+        transition: 0.5s;
+    }
+</style>

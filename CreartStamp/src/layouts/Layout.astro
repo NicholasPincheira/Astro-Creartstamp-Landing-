@@ -1,0 +1,59 @@
+---
+import { Navbar } from "../components/Navbar";
+import { Footer } from "../components/Footer";
+import Whatsapp from "../components/Whatsapp.astro";
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>CreartStamp</title>
+	</head>
+	<body>
+		<!-- Componente Whatsapp, fijo en la esquina inferior izquierda -->
+		<Whatsapp />
+		
+		<!-- Imagen de fondo -->
+		<!-- <img id="background" src={background.src} alt="" fetchpriority="high" /> -->
+
+		<!-- Contenedor principal que agrupa el Navbar, contenido y Footer -->
+		<div id="container">
+			<Navbar client:only="react" />
+			<main>
+				<slot />
+				<!-- Aquí se inyecta el contenido de cada página -->
+			</main>
+			<Footer />
+		</div>
+	</body>
+</html>
+
+<style>
+	html,
+	body {
+		margin: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	/* Estilos para la imagen de fondo */
+	#background {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		filter: blur(100px);
+	}
+
+	/* Opcional: Si deseas que el contenedor principal tenga un posicionamiento relativo */
+	#container {
+		position: relative;
+		z-index: 1;
+	}
+</style>

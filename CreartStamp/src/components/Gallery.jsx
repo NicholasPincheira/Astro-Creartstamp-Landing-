@@ -14,13 +14,13 @@ const defaultGalleryItems = [
   {
     image: 'https://images.unsplash.com/photo-1584307833174-a3bbb76ab367?q=80&w=1000',
     title: "CreartStamp",
-    descriptionDesktop: "Soy una artista-artesana-hacedora-inventora-creadora-profesora, dedicada a la joyería contemporánea y textil, explorando el límite entre la joya y la escultura a través de un enfoque transdisciplinar.",
+    descriptionDesktop: "Nos dedicamos a el diseño y confeccion de tu idea, tanto en ropas, decoraciones o lo que tu propongas, nos encanta poder ofrecerte soluciones personalizadas que se ajusten a tu solicitud",
     descriptionMobile: "Artista dedicada a la joyería contemporánea y textil.",
     align: "right",
     link: "/natalia-piderit",
     showButtonDesktop: true,
     showButtonMobile: true,
-    buttonTextDesktop: "Mas de mi →",
+    buttonTextDesktop: "Contactanos →",
     buttonTextMobile: "Ver mas",
   },
   {

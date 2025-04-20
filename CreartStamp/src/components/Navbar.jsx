@@ -41,7 +41,7 @@ const defaultNavLinks = [
     link: "#servicesSection",
   },
   {
-    title: "Experiencias",
+    title: "Trabajos",
     type: "category",
     link: "#Experiencies",
   },

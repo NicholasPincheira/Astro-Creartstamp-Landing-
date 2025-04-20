@@ -113,7 +113,7 @@ export function Workshops({ workshops = defaultWorkshops }) {
     <section id='servicesSection' ref={sectionRef} className="py-20 customMobilePost bg-white relative mb-70">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 ref={titleRef} className="text-4xl lg:text-6xl text-warm-gray-800 mb-4 font-extrabold bg-gradient-to-bl from-slate-500 to-zinc-900 bg-clip-text text-transparent leading-normal">
+          <h2 ref={titleRef} className="text-5xl lg:text-6xl text-warm-gray-800 mb-0 lg:mb-4 font-extrabold bg-gradient-to-bl from-slate-500 to-zinc-900 bg-clip-text text-transparent leading-normal">
             Servicios
           </h2>
           <div

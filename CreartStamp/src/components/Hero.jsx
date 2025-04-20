@@ -23,23 +23,23 @@ const defaultSlides = {
       div1: {
         class: "slide-item",
         img: "https://images.unsplash.com/photo-1584307833174-a3bbb76ab367?q=80&w=1000",
-        link: "/artesanal",
-        title: "Diseño Artesanal",
-        description: "Creaciones únicas con historia"
+        link: "/",
+        title: "Diseños Empresariales ",
+        description: "Diseñamos la vestimenta o las decoraciones de tu empresa"
       },
       div2: {
         class: "slide-item",
         img: 'https://images.unsplash.com/photo-1573408301185-9146fe634ad0?q=80&w=1000',
-        link: "/coleccion-exclusiva",
-        title: "Colección Exclusiva",
-        description: "Piezas limitadas"
+        link: "/",
+        title: "Diseños Eventos",
+        description: "Diseñamos la vestimenta o las decoraciones de tu cumpleaños, bodas "
       },
       div3: {
         class: "slide-item",
         img: 'https://images.unsplash.com/photo-1617038220319-276d3cfab638?q=80&w=1000',
-        link: "/arte-metal",
-        title: "Arte en Metal",
-        description: "Técnicas tradicionales"
+        link: "/",
+        title: "Diseños Estudiantiles",
+        description: "Diseñamos la vestimenta o las decoraciones para tus alumnos"
       }
     }
   },
@@ -242,7 +242,7 @@ export function Hero({ slides = defaultSlides } = {}) {
 
                   <div className="relative h-full flex z-10 flex-col items-center justify-center text-white p-6">
                     <h2 className="text-3xl md:text-4xl mb-4c text-white">{div.title}</h2>
-                    <p className="text-lg md:text-xl opacity-90">{div.description}</p>
+                    <p className="text-lg md:text-xl opacity-90 text-center">{div.description}</p>
                   </div>
                 </a>
               ))}

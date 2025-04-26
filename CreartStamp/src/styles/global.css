@@ -173,7 +173,8 @@ body.overflow-hidden {
 }
 
 .scroll-custom-icon-container {
-  top: 1%;
+  width: 100%;
+  margin-top: -55px;
 }
 
 .scroll-custom-icon {

@@ -210,7 +210,7 @@ export function Hero({ slides = defaultSlides } = {}) {
   };
 
   return (
-    <div ref={containerRef} className="hero-section relative w-full h-[80vh] md:h-[70vh] overflow-hidden flex items-center justify-center mb-10">
+    <div ref={containerRef} className="hero-section relative w-full h-[80vh] md:h-[90vh] overflow-hidden flex items-center justify-center mb-10">
 
       {/* 🔥 SKELETON mientras no cargue */}
       {!isLoaded && (

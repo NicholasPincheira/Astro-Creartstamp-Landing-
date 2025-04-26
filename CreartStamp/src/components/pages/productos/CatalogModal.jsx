@@ -40,7 +40,8 @@ export default function CatalogoModal({
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="bg-white rounded-2xl shadow-xl w-full max-w-lg p-6 relative"
+        className="bg-white rounded-2xl shadow-xl w-full max-w-lg p-6 relative
+        max-h-[100vh] overflow-y-auto border-t-20  border-white" // <-- AGREGADO: límite de altura y scroll interno
       >
         {/* Cerrar */}
         <button onClick={onClose} className="absolute top-4 right-4 text-gray-500 hover:text-black">

@@ -1,0 +1,23 @@
+entryPoints:
+  web:
+    address: ":80"
+  websecure:
+    address: ":443"
+
+providers:
+  docker:
+    exposedByDefault: false
+    network: creartstamp_net # 🔥 CORREGIDO
+  file:
+    filename: /dynamic.yml
+
+api:
+  dashboard: true
+
+certificatesResolvers:
+  letsencrypt:
+    acme:
+      email: tunombre@tucorreo.com
+      storage: /letsencrypt/acme.json
+      httpChallenge:
+        entryPoint: web

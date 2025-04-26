@@ -1,0 +1,3 @@
+mkdir -p traefik/letsencrypt
+touch traefik/letsencrypt/acme.json
+chmod 600 traefik/letsencrypt/acme.json

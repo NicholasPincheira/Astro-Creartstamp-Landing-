@@ -1,0 +1,15 @@
+http:
+  middlewares:
+    redirect-to-https:
+      redirectScheme:
+        scheme: https
+        permanent: true
+
+  routers:
+    dashboard:
+      rule: Host(`traefik.localhost`)
+      service: api@internal
+      entryPoints:
+        - web
+      middlewares:
+        - redirect-to-https

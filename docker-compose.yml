@@ -23,7 +23,7 @@ services:
       - creartstamp-node
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.creartstamp.rule=Host(`creartstamp.tudominio.cl`)" # ⚡ CAMBIAR a tu dominio real
+      - - "traefik.http.routers.creartstamp.rule=Host(`creartstamp.tudominio.cl`) || Host(`186.64.113.113`)" # ⚡ CAMBIAR a tu dominio real
       - "traefik.http.services.creartstamp.loadbalancer.server.port=80"
     networks:
       - creartstamp_net

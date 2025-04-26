@@ -1,0 +1,13 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
+
+// Importar componentes React con Islands
+import SwiperSliderSimple from "../components/pages/categorias/SwiperSliderSimple.jsx";
+import CategoriasPrincipales from "../components/pages/categorias/CategoriasPrincipales.jsx";
+---
+
+<Layout>
+  <SwiperSliderSimple client:load />
+  <CategoriasPrincipales client:load />
+</Layout>

@@ -38,30 +38,69 @@ const defaultNavLinks = [
   {
     title: "Servicios",
     type: "category",
-    link: "#servicesSection",
+    link: "/#servicesSection",
   },
   {
     title: "Trabajos",
     type: "category",
-    link: "#Experiencies",
+    link: "/#Experiencies",
   },
   {
     title: "Nosotros",
     type: "category",
-    link: "#aboutSection",
+    link: "/#aboutSection",
   },
   {
-    title: "Contactanos",
+    title: "Catálogo",
     type: "category",
-    link: "/contact",
+    link: "/categorias",
+    subcategories: [
+      {
+        title: "Ver todo el catálogo",
+        link: "/categorias",
+      },
+      {
+        title: "Poleras",
+        link: "/productos/poleras",
+        subcategories: [
+          { title: "Poleras Básicas", link: "/productos/poleras-basicas" },
+          { title: "Poleras Oversize", link: "/productos/poleras-oversize" },
+          { title: "Poleras Desgastadas", link: "/productos/poleras-desgastadas" },
+          { title: "Poleras Niño", link: "/productos/poleras-ninos" },
+        ],
+      },
+      {
+        title: "Polerones",
+        link: "/productos/polerones",
+        subcategories: [
+          { title: "Polerón Canguro", link: "/productos/poleron-canguro" },
+          { title: "Polerón Polo", link: "/productos/poleron-polo" },
+          { title: "Polerón Niño", link: "/productos/poleron-ninos" },
+        ],
+      },
+      {
+        title: "Gorros",
+        link: "/productos/gorros",
+        subcategories: [
+          { title: "Gorros Adulto", link: "/productos/gorros-adulto" },
+        ],
+      },
+      {
+        title: "Bolsos",
+        link: "/productos/bolsos",
+        subcategories: [
+          { title: "Totebag", link: "/productos/totebag" },
+        ],
+      },
+    ],
   },
 ];
+
 
 //
 // Componente DesktopMegaMenu: Se renderiza solo si existen subcategorías con contenido
 //
 function DesktopMegaMenu({ category, isOpen, anchorRef }) {
-  // Si no hay subcategorías o el array está vacío, no se renderiza
   if (!category?.subcategories || category.subcategories.length === 0) return null;
 
   const menuRef = useRef(null);
@@ -102,7 +141,6 @@ function DesktopMegaMenu({ category, isOpen, anchorRef }) {
     ...(openDirection === 'right' ? { left: 0 } : { right: 0 })
   };
 
-  // Agrupamos en filas de 4 para TODAS las categorías.
   const groupedSubcategories = chunkArray(category.subcategories, 4);
 
   return (
@@ -112,17 +150,29 @@ function DesktopMegaMenu({ category, isOpen, anchorRef }) {
           display: "grid",
           gridTemplateColumns: `repeat(${groupedSubcategories.length}, minmax(200px, 1fr))`,
           gridAutoFlow: "column-reverse"
-        }}>
+        }}
+      >
         {groupedSubcategories.map((group, groupIndex) => (
           <div key={groupIndex} className="flex flex-col space-y-2 min-w-[220px]">
             {group.map((subcategory, index) => (
               <div className="category-item" key={index}>
-                <h3 className="text-md text-black/80 mb-2">{subcategory.title}</h3>
+                {/* Ahora título principal es clickeable */}
+                <a
+                  href={subcategory.link || "#"}
+                  className="text-md text-black/80 mb-2 font-semibold hover:text-black transition-colors block"
+                >
+                  {subcategory.title}
+                </a>
+
+                {/* Subcategorías si existen */}
                 {subcategory.subcategories && (
-                  <ul className="space-y-2">
+                  <ul className="space-y-2 ml-2">
                     {subcategory.subcategories.map((item, idx) => (
                       <li key={idx}>
-                        <a href={item.link} className="text-xs text-black/60 hover:text-black transition-colors">
+                        <a
+                          href={item.link}
+                          className="text-xs text-black/60 hover:text-black transition-colors"
+                        >
                           {item.title}
                         </a>
                       </li>
@@ -189,6 +239,8 @@ function MobileMenu({ isOpen, onClose, navLinks }) {
   return (
     <div className={clsx("fixed inset-0 bg-black/50 z-50 transition-opacity duration-300", isOpen ? "opacity-100" : "opacity-0 pointer-events-none")} onClick={onClose}>
       <div ref={menuRef} className="absolute right-0 top-0 bottom-0 w-full max-w-sm bg-white shadow-xl" onClick={e => e.stopPropagation()}>
+
+        {/* Header */}
         <div className="flex items-center justify-between p-4 border-gray-400 border-b">
           <div className="flex items-center">
             {navigationStack.length > 1 && (
@@ -202,26 +254,31 @@ function MobileMenu({ isOpen, onClose, navLinks }) {
             <X className="w-6 h-6" />
           </button>
         </div>
+
+        {/* Items */}
         <div className="overflow-y-auto h-[calc(100%-4rem)]">
           {currentLevel.items.map((item, index) => (
-            <div key={index} className="border-gray-200 border-b">
-              {item.subcategories && item.subcategories.length > 0 ? (
+            <div key={index} className="border-gray-200 border-b flex items-center justify-between p-4 hover:bg-gray-50">
+
+              {/* Título clickeable */}
+              <a
+                href={item.link}
+                onClick={onClose}
+                className="text-left text-black flex-1"
+              >
+                {item.title}
+              </a>
+
+              {/* Flecha para navegar */}
+              {item.subcategories && item.subcategories.length > 0 && (
                 <button
                   onClick={() => navigateForward(item)}
-                  className="w-full p-4 flex items-center justify-between text-left hover:bg-gray-50"
+                  className="p-2 ml-2"
                 >
-                  <span>{item.title}</span>
-                  <ChevronRight className="w-5 h-5" />
+                  <ChevronRight className="w-5 h-5 text-gray-600" />
                 </button>
-              ) : (
-                <a
-                  href={item.link}
-                  onClick={onClose}  // Para cerrar el menú cuando se haga click
-                  className="w-full p-4 flex items-center justify-between text-left hover:bg-gray-50"
-                >
-                  <span>{item.title}</span>
-                </a>
               )}
+
             </div>
           ))}
         </div>
@@ -340,8 +397,11 @@ export function Navbar() {
 
         {/* Navbar Mobile Dock */}
         <nav className="fixed MobileDock bottom-4 left-1/2 transform -translate-x-1/2 z-50 lg:hidden">
-          <div className="bg-white/90 backdrop-blur-md shadow-md rounded-full px-6 py-2 flex items-center gap-2">
-            <a href={whatsappLink} className="p-0 rounded-lg hover:bg-gray-100 transition">
+          <div className="bg-white/90 backdrop-blur-md shadow-md rounded-full pl-5 pr-11 py-2 ml- flex items-center gap-2">
+            <a href="/" className="p-3 rounded-lg hover:bg-gray-100 transition">
+              <Home className="w-6 h-6 text-black" />
+            </a>
+            <a href={whatsappLink} className="rounded-lg hover:bg-gray-100 transition min-w-fit">
               <img
                 src={whatsappIcon.src || whatsappIcon}
                 alt="WhatsApp"
@@ -349,18 +409,12 @@ export function Navbar() {
                 fetchPriority="high"
               />
             </a>
-            <a href="/contact" className="p-3 rounded-lg hover:bg-gray-100 transition">
-              <MessageSquare className="w-6 h-6 text-black" />
-            </a>
-            <a href="/" className="p-3 rounded-lg hover:bg-gray-100 transition">
-              <Home className="w-6 h-6 text-black" />
-            </a>
             <button onClick={() => SetShowSocialMedia(prev => !prev)}
               className="p-3 rounded-lg hover:bg-gray-100 transition">
               <Rss className="w-6 h-6 text-black" />
             </button>
             <button onClick={() => setIsMobileMenuOpen(prev => !prev)}
-              className="p-3 rounded-lg hover:bg-gray-100 transition">
+              className="p-2 rounded-lg hover:bg-gray-100 transition">
               <Menu className="w-6 h-6 text-black" />
             </button>
           </div>

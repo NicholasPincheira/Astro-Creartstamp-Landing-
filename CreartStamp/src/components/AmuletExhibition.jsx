@@ -9,7 +9,7 @@ import 'swiper/css';
 import background from "../assets/background.svg";
 import "../styles/components/AmuletExhibition.css";
 
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 
 // Importar imágenes locales
 import polera1 from '../assets/img/index/poleras/poleranegra.png';
@@ -25,6 +25,8 @@ export function AmuletExhibition() {
   const sectionRef = useRef(null);
   const titleRef = useRef(null);
   const underlineRef = useRef(null);
+
+
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -84,7 +86,7 @@ export function AmuletExhibition() {
 
       <div className="max-w-7xl mx-auto px-4">
         <div ref={titleRef} className="text-center relative mb-16">
-          <h2 className="text-5xl lg:text-6xl font-extrabold bg-gradient-to-bl from-rose-200 to-pink-900 bg-clip-text text-transparent leading-tight">
+          <h2 className="text-4xl lg:text-6xl font-extrabold bg-gradient-to-bl from-rose-200 to-pink-900 bg-clip-text text-transparent leading-tight">
             Estampados Personalizados
           </h2>
           <div

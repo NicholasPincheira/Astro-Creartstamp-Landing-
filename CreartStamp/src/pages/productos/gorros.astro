@@ -1,0 +1,17 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import CategoriaGrid from "../../components/pages/productos/CategoriaGrid.jsx";
+import "../../styles/global.css"
+
+const items = [
+  {
+    title: "Gorros Adulto",
+    img: "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?q=80&w=1000",
+    link: "/productos/gorros-adulto",
+  },
+];
+---
+
+<Layout>
+  <CategoriaGrid title="Gorros" items={items} client:load />
+</Layout>

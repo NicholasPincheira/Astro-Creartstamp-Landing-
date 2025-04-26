@@ -1,0 +1,26 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ProductoDetalle from "../../components/pages/productos/ProductoDetalle.jsx";
+import data from "../../data/productos.json";
+import "../../styles/global.css"
+
+
+// 1. Obtener el slug de la URL
+const { slug } = Astro.params;
+
+
+
+// 2. Buscar el producto por slug
+const producto = data.find((p) => p.slug === slug);
+
+// 3. Exportar las rutas que existen
+export async function getStaticPaths() {
+  return data.map((item) => ({
+    params: { slug: item.slug },
+  }));
+}
+---
+
+<Layout>
+  <ProductoDetalle client:load producto={producto} />
+</Layout>

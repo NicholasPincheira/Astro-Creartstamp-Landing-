@@ -1,0 +1,120 @@
+[
+    {
+      "slug": "poleras-basicas",
+      "titulo": "Poleras Básicas",
+      "descripcion": "Poleras de algodón de la máxima calidad, manga corta. ¿Qué esperas? ¡Lleva la tuya!",
+      "imagen": "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?q=80&w=1000",
+      "tallas": ["S", "M", "L", "XL"],
+      "colores": ["#6ee7b7", "#fca5a5", "#93c5fd", "#fde68a"],
+      "catalogo": "/catalogos/poleras-basicas.pdf",
+          "catalogoImgs": [
+            "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?q=80&w=1000",
+            "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?q=80&w=1000"
+    ]
+    },
+    {
+      "slug": "poleras-oversize",
+      "titulo": "Polera Oversize",
+      "descripcion": "Estilo relajado y moderno. Ideal para quienes buscan comodidad sin perder el diseño.",
+      "imagen": "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?q=80&w=1000",
+      "tallas": ["S", "M", "L", "XL", "XXL"],
+      "colores": ["#e879f9", "#818cf8", "#facc15", "#4ade80"],
+      "catalogo": "/catalogos/polera-oversize.pdf",
+          "catalogoImgs": [
+            "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?q=80&w=1000",
+            "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?q=80&w=1000"
+    ]
+    },
+    {
+      "slug": "poleras-desgastadas",
+      "titulo": "Poleras Desgastadas",
+      "descripcion": "Toque vintage con estilo único. Cada prenda tiene su propia personalidad.",
+      "imagen": "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?q=80&w=1000",
+      "tallas": ["S", "M", "L", "XL"],
+      "colores": ["#d4d4d8", "#a1a1aa", "#f87171"],
+      "catalogo": "/catalogos/poleras-desgastadas.pdf",
+          "catalogoImgs": [
+            "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?q=80&w=1000",
+            "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?q=80&w=1000"
+    ]
+    },
+    {
+      "slug": "poleras-ninos",
+      "titulo": "Poleras Niño",
+      "descripcion": "Poleras cómodas y resistentes, perfectas para los más pequeños.",
+      "imagen": "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?q=80&w=1000",
+      "tallas": ["2", "4", "6", "8", "10", "12"],
+      "colores": ["#38bdf8", "#fca5a5", "#86efac"],
+      "catalogo": "/catalogos/poleras-nino.pdf",
+          "catalogoImgs": [
+            "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?q=80&w=1000",
+            "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?q=80&w=1000"
+    ]
+    },
+    {
+      "slug": "poleron-canguro",
+      "titulo": "Polerón Canguro",
+      "descripcion": "Comodidad y estilo en un solo producto. Perfecto para el invierno.",
+      "imagen": "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?q=80&w=1000",
+      "tallas": ["S", "M", "L", "XL"],
+      "colores": ["#facc15", "#60a5fa", "#f87171"],
+      "catalogo": "/catalogos/poleron-canguro.pdf",
+          "catalogoImgs": [
+            "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?q=80&w=1000",
+            "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?q=80&w=1000"
+    ]
+    },
+    {
+      "slug": "poleron-polo",
+      "titulo": "Polerón Polo",
+      "descripcion": "Diseño con cuello tipo polo, ideal para looks casuales y elegantes.",
+      "imagen": "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?q=80&w=1000",
+      "tallas": ["S", "M", "L", "XL"],
+      "colores": ["#fcd34d", "#c4b5fd", "#fda4af"],
+      "catalogo": "/catalogos/poleron-polo.pdf",
+          "catalogoImgs": [
+            "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?q=80&w=1000",
+            "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?q=80&w=1000"
+    ]
+    },
+    {
+      "slug": "poleron-ninos",
+      "titulo": "Polerón Niño",
+      "descripcion": "Abrigo cálido y resistente para niños activos y felices.",
+      "imagen": "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?q=80&w=1000",
+      "tallas": ["2", "4", "6", "8", "10"],
+      "colores": ["#93c5fd", "#fef08a", "#34d399"],
+      "catalogo": "/catalogos/poleron-nino.pdf",
+          "catalogoImgs": [
+            "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?q=80&w=1000",
+            "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?q=80&w=1000"
+    ]
+    },
+    {
+      "slug": "gorros-adulto",
+      "titulo": "Gorros Adulto",
+      "descripcion": "Complementa tu outfit con nuestros gorros lisos o bordados.",
+      "imagen": "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?q=80&w=1000",
+      "tallas": ["Talla única"],
+      "colores": ["#000000", "#fbbf24", "#93c5fd"],
+      "catalogo": "/catalogos/gorros-adulto.pdf",
+          "catalogoImgs": [
+            "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?q=80&w=1000",
+            "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?q=80&w=1000"
+    ]
+    },
+    {
+      "slug": "totebag",
+      "titulo": "Totebag",
+      "descripcion": "Bolsos de tela personalizados, prácticos y reutilizables para el día a día.",
+      "imagen": "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?q=80&w=1000",
+      "tallas": ["35x40 cm", "40x45 cm"],
+      "colores": ["#f5f5f4", "#d1d5db", "#fca5a5"],
+      "catalogo": "/catalogos/totebag.pdf",
+          "catalogoImgs": [
+            "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?q=80&w=1000",
+            "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?q=80&w=1000"
+    ]
+    }
+  ]
+  

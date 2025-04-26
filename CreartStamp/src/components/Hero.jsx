@@ -108,6 +108,7 @@ const defaultSlides = {
 
 export function Hero({ slides = defaultSlides } = {}) {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isLoaded, setIsLoaded] = useState(false); //
   const slidesRef = useRef([]);
   const containerRef = useRef(null);
   const startX = useRef(0);
@@ -115,9 +116,12 @@ export function Hero({ slides = defaultSlides } = {}) {
 
   // Registrar plugins solo en el cliente
   useEffect(() => {
-    if (typeof window !== "undefined") {
+    if (typeof window !== "undefined" && gsap?.registerPlugin) {
       gsap.registerPlugin(ScrollTrigger, Draggable);
     }
+    // Pequeño retraso para mostrar Skeleton
+    const timeout = setTimeout(() => setIsLoaded(true), 300);
+    return () => clearTimeout(timeout);
   }, []);
 
   useEffect(() => {
@@ -207,6 +211,17 @@ export function Hero({ slides = defaultSlides } = {}) {
 
   return (
     <div ref={containerRef} className="hero-section relative w-full h-[80vh] md:h-[70vh] overflow-hidden flex items-center justify-center mb-10">
+
+      {/* 🔥 SKELETON mientras no cargue */}
+      {!isLoaded && (
+        <div className="absolute inset-0 animate-pulse bg-gradient-to-br from-gray-800 via-gray-700 to-gray-800 flex items-center justify-center z-20">
+          <div className="space-y-6 text-center">
+            <div className="h-8 w-48 bg-gray-600 rounded mx-auto"></div>
+            <div className="h-5 w-64 bg-gray-600 rounded mx-auto"></div>
+          </div>
+        </div>
+      )}
+
       {/* Fondo Moderno Sutil */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-700 to-gray-800 opacity-30"></div>
 
@@ -224,8 +239,8 @@ export function Hero({ slides = defaultSlides } = {}) {
               }}
             >
               {Object.values(slideData.divs).map((div, index) => (
-                
-                
+
+
                 <a
                   key={index}
                   href={div.link}

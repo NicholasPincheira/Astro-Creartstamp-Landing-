@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 
 export function FloatingText({
   entryDuration = 2.5,
@@ -11,6 +11,9 @@ export function FloatingText({
   const sectionRef = useRef(null);
   const textRef = useRef(null);
   const timeline = useRef(null);
+
+
+
 
   useEffect(() => {
     const section = sectionRef.current;

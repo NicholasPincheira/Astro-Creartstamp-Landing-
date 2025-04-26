@@ -50,7 +50,7 @@ export function Workshops({ workshops = defaultWorkshops }) {
 
   // Registrar plugins solo en el cliente
   useEffect(() => {
-    if (typeof window !== "undefined") {
+    if (typeof window !== "undefined" && gsap?.registerPlugin) {
       gsap.registerPlugin(ScrollTrigger, Draggable);
     }
   }, []);

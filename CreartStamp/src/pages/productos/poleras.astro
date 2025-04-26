@@ -1,0 +1,32 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import CategoriaGrid from "../../components/pages/productos/CategoriaGrid.jsx";
+import "../../styles/global.css"
+
+const items = [
+  {
+    title: "Poleras Básicas",
+    img: "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?q=80&w=1000",
+    link: "/productos/poleras-basicas",
+  },
+  {
+    title: "Poleras Oversize",
+    img: "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?q=80&w=1000",
+    link: "/productos/poleras-oversize",
+  },
+  {
+    title: "Poleras Desgastadas",
+    img: "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?q=80&w=1000",
+    link: "/productos/poleras-desgastadas",
+  },
+  {
+    title: "Poleras Niños",
+    img: "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?q=80&w=1000",
+    link: "/productos/poleras-ninos",
+  },
+];
+---
+
+<Layout>
+  <CategoriaGrid title="Poleras" items={items} client:load />
+</Layout>

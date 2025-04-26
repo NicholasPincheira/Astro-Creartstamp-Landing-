@@ -1,10 +1,10 @@
 /* Sección principal */
 .AmuletSection {
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
   height: auto;
   /* Puedes ajustarlo si deseas otro alto en desktop */
-  box-shadow: 0px 21px 36px -9px #f2ebfd;
+  /* box-shadow: 0px 21px 36px -9px #f2ebfd; */
 }
 
 /* si quieres un control más fino sobre la sombra */

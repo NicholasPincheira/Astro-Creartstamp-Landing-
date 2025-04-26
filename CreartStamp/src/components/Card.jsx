@@ -10,7 +10,7 @@ const defaultCardItems = [
     image: "https://images.unsplash.com/photo-1584307833174-a3bbb76ab367?q=80&w=1000",
     cardTitle: "Alejandra",
     cardDescription:
-      "Creadora de CreartStamp, Diseñadora y confeccionista Artesanal...",
+      "Creadora de CreartStamp, Diseñadora y confeccionista Artesanal",
     tags: [
       { label: "Estampados", color: "#f5f5f4", textColor: "#44403c" },
       { label: "Pedidos Empresas", color: "#f5f5f4", textColor: "#44403c" },
@@ -75,7 +75,7 @@ export function Card({ items = defaultCardItems }) {
   }, []);
 
   return (
-    <section id='aboutSection' className="CardSection min-h-screen  flex items-center justify-center p-8 relative mt-40">
+    <section id='aboutSection' className="CardSection flex flex-col md:flex items-start md:items-center justify-center p-6 md:p-8 relative mt-40 min-h-[auto] md:min-h-screen">
       <img id="cardBackground" src={background.src} alt="" fetchPriority="high" /> 
       {items.map((item, index) => (
         <div
@@ -109,7 +109,7 @@ export function Card({ items = defaultCardItems }) {
                 </h1>
                 <p className="text-lg font-montserrat text-warm-gray-600">
                   {item.cardDescription}
-                  <a> <strong>Ver mas</strong></a>
+                  {/* <a> <strong>Ver mas</strong></a> */}
                 </p>
                 <div className="flex flex-wrap gap-3">
                   {item.tags.map((tag, idx) => (

@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 
 const defaultItems = [
   {
@@ -29,6 +29,13 @@ const defaultItems = [
 
 export function DynamicSlider({ items = defaultItems, speed = 50 }) {
   const trackRef = useRef(null);
+
+  // Registrar plugins solo en el cliente
+  useEffect(() => {
+    if (typeof window !== "undefined" && gsap?.registerPlugin) {
+      gsap.registerPlugin(ScrollTrigger);
+    }
+  }, []);
 
   useEffect(() => {
     const track = trackRef.current;
@@ -57,7 +64,7 @@ export function DynamicSlider({ items = defaultItems, speed = 50 }) {
   return (
     <section id='Experiencies' className="py-20 bg-white overflow-hidden">
       <div className="text-center mb-16">
-        <h2 className="text-5xl lg:text-6xl text-warm-gray-800 mb-0 lg:mb-4 font-extrabold bg-gradient-to-bl from-slate-500 to-zinc-900 bg-clip-text text-transparent leading-normal">
+        <h2 className="text-4xl lg:text-6xl text-warm-gray-800 mb-0 lg:mb-4 font-extrabold bg-gradient-to-bl from-slate-500 to-zinc-900 bg-clip-text text-transparent leading-normal">
           Trabajos/Clientes
         </h2>
       </div>

@@ -3,6 +3,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ChevronDown } from 'lucide-react';
 import Draggable from "gsap/Draggable";
+import { ContactModal } from "./ContactModal";
 
 // import image1 from "../../../../assets/img/Home/Seccion-1/natalia.jpg";
 // import image2 from "../../../../assets/img/Home/Seccion-1/gray.jpg";
@@ -29,11 +30,11 @@ const defaultGalleryItems = [
     descriptionDesktop: "Fusionamos la tradición artesanal con las tendencias modernas, explorando nuevas formas y materiales para crear piezas únicas. Cada diseño es una síntesis entre técnicas ancestrales y procesos innovadores, ofreciendo joyería que trasciende lo convencional y redefine la elegancia contemporánea.",
     descriptionMobile: "Tradición y modernidad en perfecta armonía, creando piezas únicas que transforman lo clásico en vanguardia..",
     align: "left",
-    link: "/disenos-contemporaneos",
+    link: "/categorias",
     showButtonDesktop: true,
     showButtonMobile: true,
-    buttonTextDesktop: "Descubre más",
-    buttonTextMobile: "Descubre más",
+    buttonTextDesktop: "Ver Todo",
+    buttonTextMobile: "Ver Todo",
   },
   {
     image: 'https://images.unsplash.com/photo-1617038220319-276d3cfab638?q=80&w=1000',
@@ -49,12 +50,13 @@ const defaultGalleryItems = [
   },
 ];
 
-export function Gallery({ items = defaultGalleryItems}) {
+export function Gallery({ items = defaultGalleryItems }) {
   const sectionRef = useRef(null);
   const titleRef = useRef(null);
   const underlineRef = useRef(null);
   const scrollIconRef = useRef(null);
   const [showIcon, setShowIcon] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     // 🚀 Detectar scroll y ocultar/mostrar la flecha
@@ -179,12 +181,21 @@ export function Gallery({ items = defaultGalleryItems}) {
                     <h3 className="text-2xl text-warm-gray-800">{item.title}</h3>
                     <p className="text-sm text-warm-gray-600">{item.descriptionMobile}</p>
                     {item.showButtonMobile && (
-                      <a
-                        href={item.link}
-                        className="mt-2 inline-block px-3 text-md font-semibold text-white bg-black rounded-full hover:bg-gray-800 transition-all"
-                      >
-                        {item.buttonTextMobile || "Ver más"}
-                      </a>
+                      index === 0 ? (
+                        <button
+                          onClick={() => setIsModalOpen(true)}
+                          className="mt-2 inline-block px-3 text-md font-semibold text-white bg-black rounded-full hover:bg-gray-800 transition-all"
+                        >
+                          {item.buttonTextMobile || "Ver más"}
+                        </button>
+                      ) : (
+                        <a
+                          href={item.link}
+                          className="mt-2 inline-block px-3 text-md font-semibold text-white bg-black rounded-full hover:bg-gray-800 transition-all"
+                        >
+                          {item.buttonTextMobile || "Ver más"}
+                        </a>
+                      )
                     )}
                   </div>
                 </div>
@@ -195,18 +206,35 @@ export function Gallery({ items = defaultGalleryItems}) {
                 <h3 className="text-4xl text-warm-gray-800 mb-6">{item.title}</h3>
                 <p className="text-lg text-warm-gray-600">{item.descriptionDesktop}</p>
                 {item.showButtonDesktop && (
-                  <a
-                    href={item.link}
-                    className="mt-4 inline-block px-5 py-2 text-lg font-semibold text-white bg-black rounded-full hover:bg-gray-800 transition-all"
-                  >
-                    {item.buttonTextDesktop || "Ver más →"}
-                  </a>
+                  index === 0 ? (
+                    <button
+                      onClick={() => setIsModalOpen(true)}
+                      className="mt-4 cursor-pointer inline-block px-5 py-2 text-lg font-semibold text-white bg-black rounded-full hover:bg-gray-800 transition-all"
+                    >
+                      {item.buttonTextDesktop || "Ver más →"}
+                    </button>
+                  ) : (
+                    <a
+                      href={item.link}
+                      className="mt-4 inline-block px-5 py-2 text-lg font-semibold text-white bg-black rounded-full hover:bg-gray-800 transition-all"
+                    >
+                      {item.buttonTextDesktop || "Ver más →"}
+                    </a>
+                  )
                 )}
               </div>
             </div>
           ))}
         </div>
       </div>
+
+      <ContactModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        productName={items[0]?.title}
+      />
+
     </section>
+
   );
 }

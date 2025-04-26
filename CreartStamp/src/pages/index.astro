@@ -15,18 +15,11 @@ import { Card } from "../components/Card";
 ---
 
 <Layout>
-	<Hero client:only="react" />
-
-	<Gallery client:only="react" />
-
-	<Workshops client:only="react" />
-
-	<AmuletExhibition client:only="react" />
-
-	<FloatingText client:only="react" />
-
-	<DynamicSlider client:only="react" />
-	
-	<Card client:only="react" />
-
+	<Hero client:load />
+	<Gallery client:load />
+	<Workshops client:load />
+	<AmuletExhibition client:load />
+	<FloatingText client:visible />
+	<DynamicSlider client:load />
+	<Card client:visible />
 </Layout>

@@ -1,0 +1,27 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import CategoriaGrid from "../../components/pages/productos/CategoriaGrid.jsx";
+import "../../styles/global.css"
+
+const items = [
+  {
+    title: "Polerón Canguro",
+    img: "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?q=80&w=1000",
+    link: "/productos/poleron-canguro",
+  },
+  {
+    title: "Polerón Polo",
+    img: "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?q=80&w=1000",
+    link: "/productos/poleron-polo",
+  },
+  {
+    title: "Polerón Niños",
+    img: "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?q=80&w=1000",
+    link: "/productos/poleron-ninos",
+  },
+];
+---
+
+<Layout>
+  <CategoriaGrid title="Polerones" items={items} client:load />
+</Layout>

@@ -303,7 +303,7 @@ body.overflow-hidden {
   }
 
   .hero-section {
-    height: 87vh;
+    height: 100dvh;
   }
 }
 

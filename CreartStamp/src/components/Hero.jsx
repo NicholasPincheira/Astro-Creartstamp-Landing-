@@ -4,7 +4,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import Draggable from "gsap/Draggable";
 
 
-// import image1 from "../../../../assets/img/Home/Slider-Principal/slider1.jpg";
+// import image1 from "../../public/assets/img/store/home/poleras_slider.jpg";
 // import image2 from "../../../../assets/img/Home/Slider-Principal/slider2.jpg";
 // import image3 from "../../../../assets/img/Home/Slider-Principal/slider3.jpg";
 // import image4 from "../../../../assets/img/Home/Slider-Principal/slider-4.jpg";
@@ -22,24 +22,24 @@ const defaultSlides = {
     divs: {
       div1: {
         class: "slide-item",
-        img: "https://images.unsplash.com/photo-1584307833174-a3bbb76ab367?q=80&w=1000",
+        img: "/assets/img/store/home/poleras_slider.jpg",
         link: "/",
-        title: "Diseños Empresariales ",
-        description: "Diseñamos la vestimenta o las decoraciones de tu empresa"
+        title: "",
+        description: ""
       },
       div2: {
         class: "slide-item",
-        img: 'https://images.unsplash.com/photo-1573408301185-9146fe634ad0?q=80&w=1000',
+        img: "/assets/img/store/home/poleras_slider.jpg",
         link: "/",
-        title: "Diseños Eventos",
-        description: "Diseñamos la vestimenta o las decoraciones de tu cumpleaños, bodas "
+        title: "",
+        description: ""
       },
       div3: {
         class: "slide-item",
-        img: 'https://images.unsplash.com/photo-1617038220319-276d3cfab638?q=80&w=1000',
+        img: "/assets/img/store/home/poleras_slider.jpg",
         link: "/",
-        title: "Diseños Estudiantiles",
-        description: "Diseñamos la vestimenta o las decoraciones para tus alumnos"
+        title: "",
+        description: ""
       }
     }
   },

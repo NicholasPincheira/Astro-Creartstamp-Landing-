@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Draggable from "gsap/Draggable";
+import "../styles/components/Hero.css"
 
 
 // import image1 from "../../public/assets/img/store/home/poleras_slider.jpg";
@@ -22,21 +23,21 @@ const defaultSlides = {
     divs: {
       div1: {
         class: "slide-item",
-        img: "/assets/img/store/home/poleras_slider.jpg",
+        img: "/assets/img/store/home/poleras.jpg",
         link: "/",
         title: "",
         description: ""
       },
       div2: {
         class: "slide-item",
-        img: "/assets/img/store/home/poleras_slider.jpg",
+        img: "/assets/img/store/home/poleras.jpg",
         link: "/",
         title: "",
         description: ""
       },
       div3: {
         class: "slide-item",
-        img: "/assets/img/store/home/poleras_slider.jpg",
+        img: "/assets/img/store/home/poleras.jpg",
         link: "/",
         title: "",
         description: ""
@@ -47,7 +48,7 @@ const defaultSlides = {
     divs: {
       div1: {
         class: "slide-item",
-        img: 'https://images.unsplash.com/photo-1603974372039-adc49044b6bd?q=80&w=2070',
+        img: "/assets/img/store/home/poleras.jpg",
         link: "/joyas",
         title: "Joyas que hablan de ti",
         description: "Diseños únicos y atemporales"
@@ -58,14 +59,14 @@ const defaultSlides = {
     divs: {
       div1: {
         class: "slide-item",
-        img: 'https://images.unsplash.com/photo-1603974372039-adc49044b6bd?q=80&w=2070',
+        img: "/assets/img/store/home/poleras.jpg",
         link: "/joyas",
         title: "Joyas que hablan de ti",
         description: "Diseños únicos y atemporales"
       },
       div2: {
         class: "slide-item",
-        img: 'https://images.unsplash.com/photo-1603974372039-adc49044b6bd?q=80&w=2070',
+        img: "/assets/img/store/home/poleras.jpg",
         link: "/joyas",
         title: "Joyas que hablan de ti",
         description: "Diseños únicos y atemporales"
@@ -76,28 +77,28 @@ const defaultSlides = {
     divs: {
       div1: {
         class: "slide-item",
-        img: "https://images.unsplash.com/photo-1603974372039-adc49044b6bd?q=80&w=2070",
+        img: "/assets/img/store/home/poleras.jpg",
         link: "/joyas",
         title: "Joyas que hablan de ti",
         description: "Diseños únicos y atemporales"
       },
       div2: {
         class: "slide-item",
-        img: "https://images.unsplash.com/photo-1603974372039-adc49044b6bd?q=80&w=2070",
+        img: "/assets/img/store/home/poleras.jpg",
         link: "/joyas",
         title: "Joyas que hablan de ti",
         description: "Diseños únicos y atemporales"
       },
       div3: {
         class: "slide-item",
-        img: "https://images.unsplash.com/photo-1603974372039-adc49044b6bd?q=80&w=2070",
+        img: "/assets/img/store/home/poleras.jpg",
         link: "/joyas",
         title: "Joyas que hablan de ti",
         description: "Diseños únicos y atemporales"
       },
       div4: {
         class: "slide-item",
-        img: "https://images.unsplash.com/photo-1603974372039-adc49044b6bd?q=80&w=2070",
+        img: "/assets/img/store/home/poleras.jpg",
         link: "/joyas",
         title: "Joyas que hablan de ti",
         description: "Diseños únicos y atemporales"
@@ -248,7 +249,7 @@ export function Hero({ slides = defaultSlides } = {}) {
                   style={{ aspectRatio: "1 / 1" }}
                 >
                   <div
-                    className="absolute inset-0 z-10 bg-cover bg-center transform hover:scale-100 transition-transform duration-500"
+                    className="bg-cover absolute inset-0 z-10 bg-no-repeat bg-center transform hover:scale-100 transition-transform duration-500"
                     style={{ backgroundImage: `url(${div.img})` }}
                   />
                   {div.overlay !== false && (

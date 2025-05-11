@@ -5,7 +5,7 @@ import Draggable from "gsap/Draggable";
 import "../styles/components/Hero.css"
 
 
-// import image1 from "../../public/assets/img/store/home/poleras_slider.jpg";
+// import image1 from "../assets/img/store/home/1500x1200.jpg";
 // import image2 from "../../../../assets/img/Home/Slider-Principal/slider2.jpg";
 // import image3 from "../../../../assets/img/Home/Slider-Principal/slider3.jpg";
 // import image4 from "../../../../assets/img/Home/Slider-Principal/slider-4.jpg";
@@ -23,21 +23,24 @@ const defaultSlides = {
     divs: {
       div1: {
         class: "slide-item",
-        img: "/assets/img/store/home/poleras.jpg",
+        imgDesktop: "/assets/img/store/home/poleras_last.jpg",
+        imgMobile: "/assets/img/store/home/poleras_last.jpg",
         link: "/",
         title: "",
         description: ""
       },
       div2: {
         class: "slide-item",
-        img: "/assets/img/store/home/poleras.jpg",
+        imgDesktop: "/assets/img/store/home/poleras_last.jpg",
+        imgMobile: "/assets/img/store/home/poleras_last.jpg",
         link: "/",
         title: "",
         description: ""
       },
       div3: {
         class: "slide-item",
-        img: "/assets/img/store/home/poleras.jpg",
+        imgDesktop: "/assets/img/store/home/poleras_last.jpg",
+        imgMobile: "/assets/img/store/home/poleras_last.jpg",
         link: "/",
         title: "",
         description: ""
@@ -48,10 +51,11 @@ const defaultSlides = {
     divs: {
       div1: {
         class: "slide-item",
-        img: "/assets/img/store/home/poleras.jpg",
+        imgDesktop: "/assets/img/store/home/2500x1080.jpg",
+        imgMobile: "/assets/img/store/home/768x1200.jpg",
         link: "/joyas",
-        title: "Joyas que hablan de ti",
-        description: "Diseños únicos y atemporales"
+        title: "",
+        description: ""
       }
     }
   },
@@ -59,17 +63,19 @@ const defaultSlides = {
     divs: {
       div1: {
         class: "slide-item",
-        img: "/assets/img/store/home/poleras.jpg",
+        imgDesktop: "/assets/img/store/home/poleras_last.jpg",
+        imgMobile: "/assets/img/store/home/poleras_last.jpg",
         link: "/joyas",
-        title: "Joyas que hablan de ti",
-        description: "Diseños únicos y atemporales"
+        title: "",
+        description: ""
       },
       div2: {
         class: "slide-item",
-        img: "/assets/img/store/home/poleras.jpg",
+        imgDesktop: "/assets/img/store/home/poleras_last.jpg",
+        imgMobile: "/assets/img/store/home/poleras_last.jpg",
         link: "/joyas",
-        title: "Joyas que hablan de ti",
-        description: "Diseños únicos y atemporales"
+        title: "",
+        description: ""
       }
     }
   },
@@ -77,28 +83,32 @@ const defaultSlides = {
     divs: {
       div1: {
         class: "slide-item",
-        img: "/assets/img/store/home/poleras.jpg",
+        imgDesktop: "/assets/img/store/home/1500x1200.jpg",
+        imgMobile: "/assets/img/store/home/1500x1200.jpg",
         link: "/joyas",
         title: "Joyas que hablan de ti",
         description: "Diseños únicos y atemporales"
       },
       div2: {
         class: "slide-item",
-        img: "/assets/img/store/home/poleras.jpg",
+        imgDesktop: "/assets/img/store/home/1500x1200.jpg",
+        imgMobile: "/assets/img/store/home/1500x1200.jpg",
         link: "/joyas",
         title: "Joyas que hablan de ti",
         description: "Diseños únicos y atemporales"
       },
       div3: {
         class: "slide-item",
-        img: "/assets/img/store/home/poleras.jpg",
+        imgDesktop: "/assets/img/store/home/1500x1200.jpg",
+        imgMobile: "/assets/img/store/home/1500x1200.jpg",
         link: "/joyas",
         title: "Joyas que hablan de ti",
         description: "Diseños únicos y atemporales"
       },
       div4: {
         class: "slide-item",
-        img: "/assets/img/store/home/poleras.jpg",
+        imgDesktop: "/assets/img/store/home/1500x1200.jpg",
+        imgMobile: "/assets/img/store/home/1500x1200.jpg",
         link: "/joyas",
         title: "Joyas que hablan de ti",
         description: "Diseños únicos y atemporales"
@@ -210,6 +220,8 @@ export function Hero({ slides = defaultSlides } = {}) {
     );
   };
 
+
+
   return (
     <div ref={containerRef} className="hero-section relative w-full h-[80vh] md:h-[90vh] overflow-hidden flex items-center justify-center mb-10">
 
@@ -224,46 +236,62 @@ export function Hero({ slides = defaultSlides } = {}) {
       )}
 
       {/* Fondo Moderno Sutil */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-700 to-gray-800 opacity-30"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-700 to-gray-800 opacity-30 z-0"></div>
 
       <div className="relative w-full h-full flex transition-transform duration-500 ">
         {Object.entries(slides)
           .filter(([key]) => key !== "config")
-          .map(([slideKey, slideData], slideIndex) => (
-            <div
-              key={slideIndex}
-              ref={(el) => (slidesRef.current[slideIndex] = el)}
-              className={`slide-${slideIndex} absolute inset-0 flex md:flex-row flex-col transition-all duration-500`}
-              style={{
-                transform: `translateX(${(slideIndex - currentSlide) * 100}%)`,
-                display: "flex"
-              }}
-            >
-              {Object.values(slideData.divs).map((div, index) => (
+          .map(([slideKey, slideData], slideIndex) => {
+            const divsArray = Object.values(slideData.divs);
+            const isSingle = divsArray.length === 1;
+            const objectFitClass = isSingle ? "object-fill" : "object-cover";
 
+            return (
+              <div
+                key={slideIndex}
+                ref={(el) => (slidesRef.current[slideIndex] = el)}
+                className={`slide-${slideIndex} absolute inset-0 flex md:flex-row flex-col transition-all duration-500`}
+                style={{
+                  transform: `translateX(${(slideIndex - currentSlide) * 100}%)`,
+                  display: "flex"
+                }}
+              >
+                {divsArray.map((div, index) => (
+                  <a
+                    key={index}
+                    href={div.link}
+                    className="slide-div relative flex-1 overflow-hidden transition-transform duration-500"
+                    style={{ aspectRatio: "1 / 1" }}
+                  >
+                    {/* Imagen Desktop */}
+                    <img
+                      src={div.imgDesktop || div.img}
+                      alt={div.title || 'Slide desktop'}
+                      className={`hidden md:block absolute inset-0 w-full h-full ${objectFitClass} z-10`}
+                    />
 
-                <a
-                  key={index}
-                  href={div.link}
-                  className={`slide-div relative flex-1 overflow-hidden transition-transform duration-500 ${div.class || ''}`}
-                  style={{ aspectRatio: "1 / 1" }}
-                >
-                  <div
-                    className="bg-cover absolute inset-0 z-10 bg-no-repeat bg-center transform hover:scale-100 transition-transform duration-500"
-                    style={{ backgroundImage: `url(${div.img})` }}
-                  />
-                  {div.overlay !== false && (
-                    <div className="absolute inset-0 bg-black bg-opacity-40" />
-                  )}
+                    {/* Imagen Mobile */}
+                    <img
+                      src={div.imgMobile || div.img}
+                      alt={div.title || 'Slide mobile'}
+                      className={`block md:hidden absolute inset-0 w-full h-full ${objectFitClass} z-10`}
+                    />
 
-                  <div className="relative h-full flex z-10 flex-col items-center justify-center text-white p-6">
-                    <h2 className="text-3xl md:text-4xl mb-4c text-white">{div.title}</h2>
-                    <p className="text-lg md:text-xl opacity-90 text-center">{div.description}</p>
-                  </div>
-                </a>
-              ))}
-            </div>
-          ))}
+                    {/* Overlay opcional */}
+                    {div.overlay !== false && (
+                      <div className="absolute inset-0 bg-black bg-opacity-40 z-9" />
+                    )}
+
+                    {/* Texto encima */}
+                    <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-white p-6">
+                      <h2 className="text-3xl md:text-4xl mb-4">{div.title}</h2>
+                      <p className="text-lg md:text-xl opacity-90 text-center">{div.description}</p>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            );
+          })}
       </div>
 
       {/* Flechas de navegación (configurables) */}

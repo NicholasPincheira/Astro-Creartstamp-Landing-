@@ -52,8 +52,8 @@ const defaultSlides = {
     divs: {
       div1: {
         class: "slide-item",
-        imgDesktop: "/assets/img/store/home/2500x1080.jpg",
-        imgMobile: "/assets/img/store/home/768x1200.jpg",
+        imgDesktop: "/assets/img/store/home/slide_polera_desk.jpg",
+        imgMobile: "/assets/img/store/home/slider_polera_mobile.jpg",
         link: "/joyas",
         title: "",
         description: ""

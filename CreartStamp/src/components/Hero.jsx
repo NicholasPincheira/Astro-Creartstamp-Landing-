@@ -64,6 +64,30 @@ const defaultSlides = {
     divs: {
       div1: {
         class: "slide-item",
+        imgDesktop: "/assets/img/store/home/polerones_desk.jpg",
+        imgMobile: "/assets/img/store/home/polerones_mobil.jpg",
+        link: "/joyas",
+        title: "",
+        description: ""
+      }
+    }
+  },
+  slide4: {
+    divs: {
+      div1: {
+        class: "slide-item",
+        imgDesktop: "/assets/img/store/home/gorro_desk.jpg",
+        imgMobile: "/assets/img/store/home/gorro_mobile.jpg",
+        link: "/joyas",
+        title: "",
+        description: ""
+      }
+    }
+  },
+  slide5: {
+    divs: {
+      div1: {
+        class: "slide-item",
         imgDesktop: "/assets/img/store/home/poleras_last.jpg",
         imgMobile: "/assets/img/store/home/poleras_last.jpg",
         link: "/joyas",
@@ -80,7 +104,7 @@ const defaultSlides = {
       }
     }
   },
-  slide4: {
+  slide6: {
     divs: {
       div1: {
         class: "slide-item",
@@ -221,17 +245,16 @@ export function Hero({ slides = defaultSlides } = {}) {
     );
   };
 
+  // Autoplay con reset en cada slide change (manual o automático)
   useEffect(() => {
     if (!slides.config.autoplay) return;
 
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) =>
-        prev === Object.keys(slides).length - 2 ? 0 : prev + 1
-      );
-    }, 5000); // Cambia de slide cada 5 segundos
+    const timeout = setTimeout(() => {
+      handleNext();
+    }, 10000); // 10 segundos hasta el siguiente slide
 
-    return () => clearInterval(interval);
-  }, [slides.config.autoplay]);
+    return () => clearTimeout(timeout);
+  }, [currentSlide, slides.config.autoplay]);
 
   return (
     <div ref={containerRef} className="hero-section relative w-full h-[80dvh] md:h-[90dvh] overflow-hidden flex items-center justify-center mb-10">

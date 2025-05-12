@@ -40,8 +40,8 @@ const defaultSlides = {
       },
       div3: {
         class: "slide-item",
-        imgDesktop: "/assets/img/store/home/poleras_last.jpg",
-        imgMobile: "/assets/img/store/home/poleras_last.jpg",
+        imgDesktop: "/assets/img/store/home/gorro.jpg",
+        imgMobile: "/assets/img/store/home/gorro.jpg",
         link: "/",
         title: "",
         description: ""
@@ -234,7 +234,7 @@ export function Hero({ slides = defaultSlides } = {}) {
   }, [slides.config.autoplay]);
 
   return (
-    <div ref={containerRef} className="hero-section relative w-full h-[80vh] md:h-[90vh] overflow-hidden flex items-center justify-center mb-10">
+    <div ref={containerRef} className="hero-section relative w-full h-[80dvh] md:h-[90dvh] overflow-hidden flex items-center justify-center mb-10">
 
       {/* 🔥 SKELETON mientras no cargue */}
       {!isLoaded && (

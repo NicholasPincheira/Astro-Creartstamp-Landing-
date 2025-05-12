@@ -18,6 +18,7 @@ const defaultSlides = {
     showArrows: true,  //Muestra/oculta flechas de navegación
     showBullets: true, //Muestra/oculta los bullets
     enableSwipe: true, //Habilita/deshabilita el swipe en móviles
+    autoplay: true,
   },
   slide1: {
     divs: {
@@ -220,7 +221,17 @@ export function Hero({ slides = defaultSlides } = {}) {
     );
   };
 
+  useEffect(() => {
+    if (!slides.config.autoplay) return;
 
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) =>
+        prev === Object.keys(slides).length - 2 ? 0 : prev + 1
+      );
+    }, 5000); // Cambia de slide cada 5 segundos
+
+    return () => clearInterval(interval);
+  }, [slides.config.autoplay]);
 
   return (
     <div ref={containerRef} className="hero-section relative w-full h-[80vh] md:h-[90vh] overflow-hidden flex items-center justify-center mb-10">

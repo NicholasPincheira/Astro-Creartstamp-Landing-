@@ -31,8 +31,8 @@ const defaultSlides = {
       },
       div2: {
         class: "slide-item",
-        imgDesktop: "/assets/img/store/home/poleras_last.jpg",
-        imgMobile: "/assets/img/store/home/poleras_last.jpg",
+        imgDesktop: "/assets/img/store/home/polerones.jpg",
+        imgMobile: "/assets/img/store/home/polerones.jpg",
         link: "/",
         title: "",
         description: ""

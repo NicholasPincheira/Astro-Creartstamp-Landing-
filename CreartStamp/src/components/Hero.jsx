@@ -26,7 +26,7 @@ const defaultSlides = {
         class: "slide-item",
         imgDesktop: "/assets/img/store/home/poleras_last.jpg",
         imgMobile: "/assets/img/store/home/poleras_last.jpg",
-        link: "/",
+        link: "/productos/poleras",
         title: "",
         description: ""
       },
@@ -34,7 +34,7 @@ const defaultSlides = {
         class: "slide-item",
         imgDesktop: "/assets/img/store/home/polerones.jpg",
         imgMobile: "/assets/img/store/home/polerones.jpg",
-        link: "/",
+        link: "/productos/polerones",
         title: "",
         description: ""
       },
@@ -42,7 +42,7 @@ const defaultSlides = {
         class: "slide-item",
         imgDesktop: "/assets/img/store/home/gorro.jpg",
         imgMobile: "/assets/img/store/home/gorro.jpg",
-        link: "/",
+        link: "/productos/gorros",
         title: "",
         description: ""
       }
@@ -54,7 +54,7 @@ const defaultSlides = {
         class: "slide-item",
         imgDesktop: "/assets/img/store/home/slide_polera_desk.jpg",
         imgMobile: "/assets/img/store/home/slider_polera_mobile.jpg",
-        link: "/joyas",
+        link: "/productos/poleras",
         title: "",
         description: ""
       }
@@ -66,7 +66,7 @@ const defaultSlides = {
         class: "slide-item",
         imgDesktop: "/assets/img/store/home/polerones_desk.jpg",
         imgMobile: "/assets/img/store/home/polerones_mobil.jpg",
-        link: "/joyas",
+        link: "/productos/polerones",
         title: "",
         description: ""
       }
@@ -78,7 +78,7 @@ const defaultSlides = {
         class: "slide-item",
         imgDesktop: "/assets/img/store/home/gorro_desk.jpg",
         imgMobile: "/assets/img/store/home/gorro_mobile.jpg",
-        link: "/joyas",
+        link: "/productos/gorros",
         title: "",
         description: ""
       }

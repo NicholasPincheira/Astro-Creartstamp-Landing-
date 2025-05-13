@@ -10,7 +10,7 @@ const defaultCardItems = [
     image: "https://images.unsplash.com/photo-1584307833174-a3bbb76ab367?q=80&w=1000",
     cardTitle: "Alejandra",
     cardDescription:
-      "Creadora de CreartStamp, Diseñadora y confeccionista Artesanal",
+      "Profesional del estampado textil, especializada en la personalización de prendas.Creativa,detallista,diseñadora y creadora de CreartStamp y de Effatá  .Con conocimientos tecnicos y de las tecnicas usadas al estampar.",
     tags: [
       { label: "Estampados", color: "#f5f5f4", textColor: "#44403c" },
       { label: "Pedidos Empresas", color: "#f5f5f4", textColor: "#44403c" },
@@ -107,7 +107,7 @@ export function Card({ items = defaultCardItems }) {
                 <h1 className="text-4xl md:text-5xl font-bold font-jost text-warm-gray-800">
                   {item.cardTitle}
                 </h1>
-                <p className="text-lg font-montserrat text-warm-gray-600">
+                <p className="text-xs md:text-lg font-montserrat text-warm-gray-600">
                   {item.cardDescription}
                   {/* <a> <strong>Ver mas</strong></a> */}
                 </p>
@@ -115,7 +115,7 @@ export function Card({ items = defaultCardItems }) {
                   {item.tags.map((tag, idx) => (
                     <span
                       key={idx}
-                      className="px-4 py-2 rounded-full text-sm"
+                      className="px-4 py-2 rounded-full text-xs md:text-sm"
                       style={{
                         backgroundColor: tag.color,
                         color: tag.textColor,

@@ -84,62 +84,62 @@ const defaultSlides = {
       }
     }
   },
-  slide5: {
-    divs: {
-      div1: {
-        class: "slide-item",
-        imgDesktop: "/assets/img/store/home/poleras_last.jpg",
-        imgMobile: "/assets/img/store/home/poleras_last.jpg",
-        link: "/joyas",
-        title: "",
-        description: ""
-      },
-      div2: {
-        class: "slide-item",
-        imgDesktop: "/assets/img/store/home/poleras_last.jpg",
-        imgMobile: "/assets/img/store/home/poleras_last.jpg",
-        link: "/joyas",
-        title: "",
-        description: ""
-      }
-    }
-  },
-  slide6: {
-    divs: {
-      div1: {
-        class: "slide-item",
-        imgDesktop: "/assets/img/store/home/1500x1200.jpg",
-        imgMobile: "/assets/img/store/home/1500x1200.jpg",
-        link: "/joyas",
-        title: "Joyas que hablan de ti",
-        description: "Diseños únicos y atemporales"
-      },
-      div2: {
-        class: "slide-item",
-        imgDesktop: "/assets/img/store/home/1500x1200.jpg",
-        imgMobile: "/assets/img/store/home/1500x1200.jpg",
-        link: "/joyas",
-        title: "Joyas que hablan de ti",
-        description: "Diseños únicos y atemporales"
-      },
-      div3: {
-        class: "slide-item",
-        imgDesktop: "/assets/img/store/home/1500x1200.jpg",
-        imgMobile: "/assets/img/store/home/1500x1200.jpg",
-        link: "/joyas",
-        title: "Joyas que hablan de ti",
-        description: "Diseños únicos y atemporales"
-      },
-      div4: {
-        class: "slide-item",
-        imgDesktop: "/assets/img/store/home/1500x1200.jpg",
-        imgMobile: "/assets/img/store/home/1500x1200.jpg",
-        link: "/joyas",
-        title: "Joyas que hablan de ti",
-        description: "Diseños únicos y atemporales"
-      }
-    }
-  }
+  // slide5: {
+  //   divs: {
+  //     div1: {
+  //       class: "slide-item",
+  //       imgDesktop: "/assets/img/store/home/poleras_last.jpg",
+  //       imgMobile: "/assets/img/store/home/poleras_last.jpg",
+  //       link: "/joyas",
+  //       title: "",
+  //       description: ""
+  //     },
+  //     div2: {
+  //       class: "slide-item",
+  //       imgDesktop: "/assets/img/store/home/poleras_last.jpg",
+  //       imgMobile: "/assets/img/store/home/poleras_last.jpg",
+  //       link: "/joyas",
+  //       title: "",
+  //       description: ""
+  //     }
+  //   }
+  // },
+  // slide6: {
+  //   divs: {
+  //     div1: {
+  //       class: "slide-item",
+  //       imgDesktop: "/assets/img/store/home/1500x1200.jpg",
+  //       imgMobile: "/assets/img/store/home/1500x1200.jpg",
+  //       link: "/joyas",
+  //       title: "Joyas que hablan de ti",
+  //       description: "Diseños únicos y atemporales"
+  //     },
+  //     div2: {
+  //       class: "slide-item",
+  //       imgDesktop: "/assets/img/store/home/1500x1200.jpg",
+  //       imgMobile: "/assets/img/store/home/1500x1200.jpg",
+  //       link: "/joyas",
+  //       title: "Joyas que hablan de ti",
+  //       description: "Diseños únicos y atemporales"
+  //     },
+  //     div3: {
+  //       class: "slide-item",
+  //       imgDesktop: "/assets/img/store/home/1500x1200.jpg",
+  //       imgMobile: "/assets/img/store/home/1500x1200.jpg",
+  //       link: "/joyas",
+  //       title: "Joyas que hablan de ti",
+  //       description: "Diseños únicos y atemporales"
+  //     },
+  //     div4: {
+  //       class: "slide-item",
+  //       imgDesktop: "/assets/img/store/home/1500x1200.jpg",
+  //       imgMobile: "/assets/img/store/home/1500x1200.jpg",
+  //       link: "/joyas",
+  //       title: "Joyas que hablan de ti",
+  //       description: "Diseños únicos y atemporales"
+  //     }
+  //   }
+  // }
 };
 
 export function Hero({ slides = defaultSlides } = {}) {

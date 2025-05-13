@@ -9,6 +9,7 @@ import { AmuletExhibition } from "../components/AmuletExhibition";
 import { FloatingText } from "../components/FloatingText";
 import { DynamicSlider } from "../components/DynamicSlider";
 import { Card } from "../components/Card";
+import { ShippingSecurity } from "../components/ShippingSecurity";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -17,6 +18,7 @@ import { Card } from "../components/Card";
 <Layout>
 	<Hero client:load />
 	<Gallery client:load />
+	<ShippingSecurity client:visible />
 	<Workshops client:load />
 	<AmuletExhibition client:load />
 	<FloatingText client:visible />

@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef, createRef } from 'react';
 import { MessageSquare, Menu, X, ChevronRight, ChevronLeft, Home, Archive, User, Settings, Linkedin, Mail, Rss } from 'lucide-react';
 import clsx from 'clsx';
 import gsap from 'gsap';
-import logo from "../assets/img/logo/creartstamp.png";
+import logo from "../assets/img/logo/effata.png";
 import whatsappIcon from "../assets/img/social/whatsapp.png";
 
 

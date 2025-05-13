@@ -5,7 +5,7 @@ import { ChevronDown } from 'lucide-react';
 import Draggable from "gsap/Draggable";
 import { ContactModal } from "./ContactModal";
 
-// import image1 from "../../../../assets/img/Home/Seccion-1/natalia.jpg";
+import image1 from "../assets/img/logo/effata_original.jpg";
 // import image2 from "../../../../assets/img/Home/Seccion-1/gray.jpg";
 // import image3 from "../../../../assets/img/Home/Seccion-1/joyeria.jpeg";
 
@@ -13,22 +13,22 @@ import { ContactModal } from "./ContactModal";
 
 const defaultGalleryItems = [
   {
-    image: 'https://images.unsplash.com/photo-1584307833174-a3bbb76ab367?q=80&w=1000',
-    title: "CreartStamp",
-    descriptionDesktop: "Nos dedicamos a el diseño y confeccion de tu idea, tanto en ropas, decoraciones o lo que tu propongas, nos encanta poder ofrecerte soluciones personalizadas que se ajusten a tu solicitud",
-    descriptionMobile: "Artista dedicada a la joyería contemporánea y textil.",
+    image: image1.src,
+    title: "EFFATA",
+    descriptionDesktop: "En mi corazón había un deseo  de que con mi trabajo pudiera traer parte del cielo a la tierra , llevar las buenas noticias a través de un diseño,frase o imagen. Te invito a visitar nuestra página y en nuestro Catálogo  te damos la oportunidad de que tú elijas el diseño  que más te identifica, tenemos diseños originales y también una colección propia.",
+    descriptionMobile: "En mi corazón había un deseo  de que con mi trabajo pudiera traer parte del cielo a la tierra , llevar las buenas noticias a través de un diseño,frase o imagen...",
     align: "right",
-    link: "/natalia-piderit",
+    link: "/",
     showButtonDesktop: true,
     showButtonMobile: true,
     buttonTextDesktop: "Contactanos →",
-    buttonTextMobile: "Ver mas",
+    buttonTextMobile: "Contactanos →",
   },
   {
     image: 'https://images.unsplash.com/photo-1573408301185-9146fe634ad0?q=80&w=1000',
-    title: "Diseños Contemporáneos",
-    descriptionDesktop: "Fusionamos la tradición artesanal con las tendencias modernas, explorando nuevas formas y materiales para crear piezas únicas. Cada diseño es una síntesis entre técnicas ancestrales y procesos innovadores, ofreciendo joyería que trasciende lo convencional y redefine la elegancia contemporánea.",
-    descriptionMobile: "Tradición y modernidad en perfecta armonía, creando piezas únicas que transforman lo clásico en vanguardia..",
+    title: "Diseños Originales",
+    descriptionDesktop: "Fucionamos el diseño que te ofrezco en conjunto con tu idea, dando originalidad para crear algo único y especial para ti. EFFATA no es solo  un diseño fijo si no tu eres tambien el autor de tu diseño para tu estampado.",
+    descriptionMobile: "Fucionamos el diseño que te ofrezco en conjunto con tu idea.",
     align: "left",
     link: "/categorias",
     showButtonDesktop: true,
@@ -38,11 +38,11 @@ const defaultGalleryItems = [
   },
   {
     image: 'https://images.unsplash.com/photo-1617038220319-276d3cfab638?q=80&w=1000',
-    title: "Colecciones Exclusivas",
-    descriptionDesktop: "Cada pieza es una expresión auténtica de estilo y personalidad. Nuestras colecciones están diseñadas para quienes buscan más que un accesorio: buscan una obra de arte que refleje su esencia, con detalles únicos y una historia en cada creación.",
-    descriptionMobile: "Joyería única que refleja tu esencia y resalta tu individualidad con detalles exclusivos.",
+    title: "Coleccion Propia",
+    descriptionDesktop: "buscamos ir mas alla de lo tradicional y para eso nos conectamos creando nuestros diseños propios para entregar una expresion autentica y que reflejen historia, profesia y lo que habla el cielo.",
+    descriptionMobile: "buscamos ir mas alla de lo tradicional y para eso nos conectamos creando nuestros diseños propios..",
     align: "right",
-    link: "/colecciones-exclusivas",
+    link: "/categorias",
     showButtonDesktop: true,
     showButtonMobile: true,
     buttonTextDesktop: "Ver colección",

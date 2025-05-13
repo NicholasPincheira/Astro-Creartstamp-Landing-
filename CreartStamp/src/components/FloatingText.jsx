@@ -92,13 +92,13 @@ export function FloatingText({
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div ref={textRef} className="text-center md:text-left transform">
           <h2 className="text-3xl md:text-7xl font-serif text-warm-gray-800 mb-4 md:mb-8 leading-tight">
-            El Arte de Crear
+            EFFATÁ 
             <br className="" />
-            Perfeccion, Elegancia
+            {/* Perfeccion, Elegancia */}
           </h2>
           <p className="text-lg  md:text-2xl text-warm-gray-600 max-w-2xl mx-auto md:mx-0 leading-relaxed">
-            Cada trabajo entrega experiencia, cada diseño una emocion
-            Creado para entregarte algo que espero te guste!
+          Cada trabajo entrega experiencia, cada diseño es realizado con amor
+          dedicacion. Espero te guste !
           </p>
         </div>
       </div>

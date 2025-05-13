@@ -32,20 +32,20 @@ export function ShippingSecurity() {
   return (
     <div
       ref={sectionRef}
-      className="relative w-full max-w-xl mx-auto my-40 rounded-xl text-center px-8 py-12 overflow-visible">
+      className="relative w-full max-w-(58%) mx-auto my-40 rounded-xl text-center px-8 py-12 overflow-visible">
         <img id="cardBackground" src={background.src} alt="" fetchPriority="high" /> 
       <div className="mb-12">
-        <Truck className="mx-auto mb-4 w-12 h-12 text-pink-900" />
-        <h2 className="text-2xl font-bold font-extrabold bg-gradient-to-bl from-rose-200 to-pink-900 bg-clip-text text-transparent leading-tight">Envios</h2>
-        <p className="mt-2 text-base leading-relaxed font-extrabold bg-gradient-to-bl from-rose-200 to-pink-900 bg-clip-text text-transparent leading-tight">
+        <Truck className="mx-auto mb-4 w-30 h-30 text-pink-900" />
+        <h2 className="text-4xl font-bold font-extrabold bg-gradient-to-bl from-rose-200 to-pink-900 bg-clip-text text-transparent leading-tight">Envios</h2>
+        <p className="mt-2 text-xl text-base leading-relaxed font-extrabold bg-gradient-to-bl from-rose-200 to-pink-900 bg-clip-text text-transparent leading-tight">
           Los más rápidos imprimiendo poleras: Envío express en Santiago y priority en regiones vía Bluexpress
         </p>
       </div>
 
       <div className="mb-30">
-        <CreditCard className="mx-auto mb-4 w-12 h-12  text-pink-900" />
-        <h2 className="text-2xl font-bold font-extrabold bg-gradient-to-bl from-rose-200 to-pink-900 bg-clip-text text-transparent leading-tight">Pago seguro</h2>
-        <p className="mt-2 text-base leading-relaxed font-extrabold bg-gradient-to-bl from-rose-200 to-pink-900 bg-clip-text text-transparent leading-tight">
+        <CreditCard className="mx-auto mb-4 w-30 h-30  text-pink-900" />
+        <h2 className="text-4xl font-bold font-extrabold bg-gradient-to-bl from-rose-200 to-pink-900 bg-clip-text text-transparent leading-tight">Pago seguro</h2>
+        <p className="mt-2 text-xl text-base leading-relaxed font-extrabold bg-gradient-to-bl from-rose-200 to-pink-900 bg-clip-text text-transparent leading-tight">
           Vía Webpay, Khipu, Paypal o transferencia
         </p>
       </div>

@@ -18,7 +18,7 @@ export function ContactModal({ isOpen, onClose, productName, customMessage }) {
   if (!visible && !isOpen) return null;
 
   const message = customMessage || `Hola, estoy interesado en ${productName}`;
-  const whatsappNumber = '56912345678';
+  const whatsappNumber = '56979567422';
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
   const mailtoLink = `mailto:tucorreo@ejemplo.com?subject=${encodeURIComponent(
     `Consulta sobre ${productName || "un producto"}`

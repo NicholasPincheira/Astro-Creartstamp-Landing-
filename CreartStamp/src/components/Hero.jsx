@@ -52,8 +52,8 @@ const defaultSlides = {
     divs: {
       div1: {
         class: "slide-item",
-        imgDesktop: "/assets/img/store/home/slide_polera_desk.jpg",
-        imgMobile: "/assets/img/store/home/slider_polera_mobile.jpg",
+        imgDesktop: "/assets/img/store/home/Sliders/slider_desk_3.png",
+        imgMobile: "/assets/img/store/home/Sliders/slider_mobile_3.png",
         link: "/productos/poleras",
         title: "",
         description: ""
@@ -64,8 +64,8 @@ const defaultSlides = {
     divs: {
       div1: {
         class: "slide-item",
-        imgDesktop: "/assets/img/store/home/polerones_desk.jpg",
-        imgMobile: "/assets/img/store/home/polerones_mobil.jpg",
+        imgDesktop: "/assets/img/store/home/Sliders/slider_desk_1.png",
+        imgMobile: "/assets/img/store/home/Sliders/slider_mobile_1.png",
         link: "/productos/polerones",
         title: "",
         description: ""
@@ -76,8 +76,8 @@ const defaultSlides = {
     divs: {
       div1: {
         class: "slide-item",
-        imgDesktop: "/assets/img/store/home/gorro_desk.jpg",
-        imgMobile: "/assets/img/store/home/gorro_mobile.jpg",
+        imgDesktop: "/assets/img/store/home/Sliders/slider_desk_2.png",
+        imgMobile: "/assets/img/store/home/Sliders/slider_mobile_2.png",
         link: "/productos/gorros",
         title: "",
         description: ""
